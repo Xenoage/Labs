@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.*?>
 
 
-<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xenoage.labs.javafxsymbolstest.MainPanelController">
    <children>
       <HBox spacing="15.0" VBox.vgrow="NEVER">
          <children>
             <Label text="Number of symbols:" />
-            <Slider majorTickUnit="250.0" max="1000.0" prefHeight="40.0" prefWidth="305.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+            <Slider fx:id="sliderSymbols" majorTickUnit="250.0" max="1000.0" prefHeight="40.0" prefWidth="305.0" showTickLabels="true" showTickMarks="true" value="100.0" />
             <HBox alignment="TOP_RIGHT" spacing="15.0" HBox.hgrow="ALWAYS">
                <children>
                   <Label text="FPS:" HBox.hgrow="ALWAYS" />
@@ -25,13 +25,13 @@
             <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
          </VBox.margin>
       </HBox>
-      <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+      <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
         <tabs>
           <Tab text="Canvas">
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Canvas height="470.0" layoutX="10.0" layoutY="10.0" width="780.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                        <Canvas fx:id="canvasPaths" height="470.0" layoutX="10.0" layoutY="10.0" width="780.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
                      </children>
                   </AnchorPane>
                </content>
