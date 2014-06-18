@@ -19,7 +19,7 @@ public class JavaFXSymbolsTest
 		
 		Scene scene = new Scene(root);
 
-		stage.setTitle("FXML Welcome");
+		stage.setTitle("JavaFX Symbols Test");
 		stage.setScene(scene);
 		stage.show();
 	}

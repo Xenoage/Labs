@@ -7,7 +7,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xenoage.labs.javafxsymbolstest.MainPanelController">
    <children>
       <HBox spacing="15.0" VBox.vgrow="NEVER">
@@ -17,7 +16,7 @@
             <HBox alignment="TOP_RIGHT" spacing="15.0" HBox.hgrow="ALWAYS">
                <children>
                   <Label text="FPS:" HBox.hgrow="ALWAYS" />
-                  <Label alignment="CENTER_RIGHT" layoutX="314.0" layoutY="10.0" prefWidth="50.0" text="0" />
+                  <Label fx:id="lblFPS" alignment="CENTER_RIGHT" layoutX="314.0" layoutY="10.0" prefWidth="50.0" text="0" />
                </children>
             </HBox>
          </children>
@@ -43,7 +42,7 @@
           </Tab>
             <Tab text="Canvas with Font">
               <content>
-                <AnchorPane />
+                <AnchorPane fx:id="parentForFontCanvas" />
               </content>
             </Tab>
         </tabs>
