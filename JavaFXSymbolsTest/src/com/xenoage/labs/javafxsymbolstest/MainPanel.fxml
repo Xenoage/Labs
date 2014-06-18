@@ -12,7 +12,7 @@
       <HBox spacing="15.0" VBox.vgrow="NEVER">
          <children>
             <Label text="Number of symbols:" />
-            <Slider fx:id="sliderSymbols" majorTickUnit="250.0" max="1000.0" prefHeight="40.0" prefWidth="305.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+            <Slider fx:id="sliderSymbols" blockIncrement="100.0" majorTickUnit="1000.0" max="10000.0" prefHeight="40.0" prefWidth="402.0" showTickLabels="true" showTickMarks="true" value="100.0" />
             <HBox alignment="TOP_RIGHT" spacing="15.0" HBox.hgrow="ALWAYS">
                <children>
                   <Label text="FPS:" HBox.hgrow="ALWAYS" />

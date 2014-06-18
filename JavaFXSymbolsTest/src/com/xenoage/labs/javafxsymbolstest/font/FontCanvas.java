@@ -14,7 +14,7 @@ public class FontCanvas
 	public FontCanvas(MainPanelController mainPanel) {
 		super(mainPanel);
 		//init symbols
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 10000; i++) {
 			symbols.add(new FontSymbol(Math.random() * getWidth(), Math.random() * getHeight(),
 				Math.random() * 2 - 1, Math.random() * 2 - 1));
 		}

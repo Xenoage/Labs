@@ -15,6 +15,7 @@ import javafx.scene.layout.StackPane;
 import javax.swing.JOptionPane;
 
 import com.xenoage.labs.javafxsymbolstest.font.FontCanvas;
+import com.xenoage.labs.javafxsymbolstest.nodes.NodesPane;
 import com.xenoage.labs.javafxsymbolstest.paths.PathCanvas;
 
 /**
@@ -40,11 +41,10 @@ public class MainPanelController {
 		symbolsCount.bind(sliderSymbols.valueProperty());
 		//sliderSymbols.valueProperty().addListener(n -> JOptionPane.showMessageDialog(null, n));
 		//tab changes
-		tabPane.getSelectionModel().selectedItemProperty()
-			.addListener((ov, oldVal, newVal) -> {
-				setTabActive(oldVal, false);
-				setTabActive(newVal, true);
-			});
+		tabPane.getSelectionModel().selectedItemProperty().addListener((ov, oldVal, newVal) -> {
+			setTabActive(oldVal, false);
+			setTabActive(newVal, true);
+		});
 		//add path canvas
 		{
 			PathCanvas c = new PathCanvas(this);
@@ -52,6 +52,15 @@ public class MainPanelController {
 			c.heightProperty().bind(parentForPathCanvas.heightProperty());
 			parentForPathCanvas.getChildren().add(c);
 			c.start();
+		}
+		//add nodes pane
+		{
+			NodesPane c = new NodesPane(this);
+			AnchorPane.setLeftAnchor(c, 10.0);
+			AnchorPane.setTopAnchor(c, 10.0);
+			AnchorPane.setRightAnchor(c, 10.0);
+			AnchorPane.setBottomAnchor(c, 10.0);
+			parentForNodes.getChildren().add(c);
 		}
 		//add font canvas
 		{
@@ -61,7 +70,7 @@ public class MainPanelController {
 			parentForFontCanvas.getChildren().add(c);
 		}
 	}
-	
+
 	private void setTabActive(Tab tab, boolean active) {
 		AnchorPane pane = (AnchorPane) tab.getContent();
 		if (pane.getChildren().size() == 0)
@@ -73,6 +82,13 @@ public class MainPanelController {
 				canvas.start();
 			else
 				canvas.stop();
+		}
+		else if (node instanceof NodesPane) {
+			NodesPane p = (NodesPane) node;
+			if (active)
+				p.start();
+			else
+				p.stop();
 		}
 	}
 
