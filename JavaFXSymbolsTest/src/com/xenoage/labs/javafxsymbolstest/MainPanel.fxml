@@ -28,16 +28,12 @@
         <tabs>
           <Tab text="Canvas">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Canvas fx:id="canvasPaths" height="470.0" layoutX="10.0" layoutY="10.0" width="780.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
-                     </children>
-                  </AnchorPane>
+                  <AnchorPane fx:id="parentForPathCanvas" prefHeight="200.0" prefWidth="200.0" />
                </content>
           </Tab>
           <Tab text="Nodes">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane fx:id="parentForNodes" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
           </Tab>
             <Tab text="Canvas with Font">

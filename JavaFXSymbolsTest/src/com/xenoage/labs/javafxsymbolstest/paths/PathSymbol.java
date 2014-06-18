@@ -1,23 +1,17 @@
 package com.xenoage.labs.javafxsymbolstest.paths;
 
+import com.xenoage.labs.javafxsymbolstest.BaseSymbol;
+
 import javafx.scene.canvas.GraphicsContext;
 
-public class PathSymbol {
-
-	public double x = 0;
-	public double y = 0;
-	public double dirX = 0;
-	public double dirY = 0;
-
+public class PathSymbol
+	extends BaseSymbol {
 
 	public PathSymbol(double x, double y, double dirX, double dirY) {
-		this.x = x;
-		this.y = y;
-		this.dirX = dirX;
-		this.dirY = dirY;
+		super(x, y, dirX, dirY);
 	}
 
-	public void draw(GraphicsContext gc) {
+	@Override public void draw(GraphicsContext gc) {
 		gc.save();
 		gc.translate(x, y);
 		gc.scale(0.2, 0.2);
