@@ -88,11 +88,11 @@ public class PathCanvas
 	}
 
 	@Override public double prefWidth(double height) {
-		return getWidth();
+		return 100; //very small preferred size, to allow downsizing
 	}
 
 	@Override public double prefHeight(double width) {
-		return getHeight();
+		return 100; //very small preferred size, to allow downsizing
 	}
 
 }

@@ -41,9 +41,9 @@
             </content>
           </Tab>
             <Tab text="Canvas with Font">
-              <content>
-                <AnchorPane fx:id="parentForFontCanvas" />
-              </content>
+               <content>
+                  <AnchorPane fx:id="parentForFontCanvas" prefHeight="200.0" prefWidth="200.0" />
+               </content>
             </Tab>
         </tabs>
       </TabPane>
